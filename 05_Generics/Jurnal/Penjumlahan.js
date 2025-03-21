@@ -5,6 +5,7 @@ class Penjumlahan {
     }
 }
 
+// Contoh NIM: 12345678
 let nim = "2311104007";
 let lastDigit = parseInt(nim[nim.length - 1]);
 let input1 = parseInt(nim.substring(0, 2)); // "12"
