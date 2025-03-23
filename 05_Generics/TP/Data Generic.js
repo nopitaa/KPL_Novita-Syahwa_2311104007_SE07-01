@@ -8,5 +8,10 @@ class DataGeneric {
     }
 }
 
-testData = new DataGeneric("2311104007");
-testData.PrintData();
+function main() {
+    const nim = "2311104007"; // Ganti dengan NIM praktikan
+    const dataGeneric = new DataGeneric(nim);
+    dataGeneric.PrintData();
+}
+
+main();
