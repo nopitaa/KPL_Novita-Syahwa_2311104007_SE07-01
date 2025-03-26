@@ -1,20 +1,25 @@
-const SayaTubeVideo = require("./SayaTubeVideo");
+const SayaTubeVideo = require('./SayaTubeVideo');
 
 class SayaTubeUser {
     constructor(username) {
-        if (typeof username !== "string" || username.length === 0) {
-            throw new Error("Username harus berupa string yang tidak kosong");
+        if (!username || username.length > 100) {
+            throw new Error("Username tidak boleh kosong dan maksimal 100 karakter.");
         }
+
         this.id = Math.floor(10000 + Math.random() * 90000); // 5-digit random ID
         this.username = username;
         this.uploadedVideos = [];
     }
 
     AddVideo(video) {
-        if (!(video instanceof SayaTubeVideo)) {
-            console.log("Error: Hanya bisa menambahkan instance dari SayaTubeVideo");
-            return;
+        if (!video || !(video instanceof SayaTubeVideo)) {
+            throw new Error("Video yang ditambahkan harus berupa instance dari SayaTubeVideo.");
         }
+        
+        if (video.playCount > Number.MAX_SAFE_INTEGER) {
+            throw new Error("Play count video tidak boleh melebihi batas maksimum integer.");
+        }
+
         this.uploadedVideos.push(video);
     }
 
@@ -24,10 +29,10 @@ class SayaTubeUser {
 
     PrintAllVideoPlaycount() {
         console.log(`User: ${this.username}`);
-        this.uploadedVideos.forEach((video, index) => {
-            console.log(`Video ${index + 1} judul: ${video.title}`);
-        });
-        console.log(`Total Play Count: ${this.GetTotalVideoPlayCount()}`);
+        let maxVideos = Math.min(8, this.uploadedVideos.length);
+        for (let i = 0; i < maxVideos; i++) {
+            console.log(`Video ${i + 1} judul: ${this.uploadedVideos[i].title}`);
+        }
     }
 }
 
