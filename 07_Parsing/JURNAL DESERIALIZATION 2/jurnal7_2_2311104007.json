@@ -1,0 +1,39 @@
+   {
+   "members" : [
+      {
+         "firstName": "Novita",
+         "lastName": "Syahwa",
+         "gender": "female",
+         "age": 20,
+         "nim": "2311104007"
+      },
+      {
+         "firstName": "Prajna",
+         "lastName": "paramitha",
+         "gender": "female",
+         "age": 19,
+         "nim": "2311104016"
+      },
+      {
+         "firstName": "Mei ",
+         "lastName": "Sari",
+         "gender": "female",
+         "age": 19,
+         "nim": "23111040012"
+      },
+      {
+         "firstName": "Matryatus ",
+         "lastName": "Sofia",
+         "gender": "female",
+         "age": 19,
+         "nim": "2311104003"
+      },
+      {
+         "firstName": "Tri ",
+         "lastName": "Mylani",
+         "gender": "female",
+         "age": 19,
+         "nim": "2311104001"
+      }
+   ]
+   }
