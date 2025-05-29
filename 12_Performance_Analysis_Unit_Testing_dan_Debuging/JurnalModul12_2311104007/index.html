@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Hitung Pangkat</title>
+    </head>
+    <body>
+    <h2>Hitung Nilai Pangkat</h2>
+    <input type="number" id="inputA" placeholder="Masukkan a">
+    <input type="number" id="inputB" placeholder="Masukkan b">
+    <button onclick="hitung()">Hitung</button>
+    <p>Hasil: <span id="output">-</span></p>
+
+    <script>
+        function CariNilaiPangkat(a, b) {
+        if (b === 0) return 1;
+        if (b < 0) return -1;
+        if (b > 10 || a > 100) return -2;
+        let hasil = 1;
+        for (let i = 0; i < b; i++) {
+            hasil *= a;
+            if (hasil > Number.MAX_SAFE_INTEGER) {
+            return -3;
+            }
+        }
+        return hasil;
+        }
+
+        function hitung() {
+        const a = parseInt(document.getElementById("inputA").value);
+        const b = parseInt(document.getElementById("inputB").value);
+        const hasil = CariNilaiPangkat(a, b);
+        document.getElementById("output").textContent = hasil;
+        }
+    </script>
+    </body>
+    </html>
