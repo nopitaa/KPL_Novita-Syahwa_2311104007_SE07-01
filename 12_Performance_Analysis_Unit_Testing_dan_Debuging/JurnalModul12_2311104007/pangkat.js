@@ -12,6 +12,4 @@ function CariNilaiPangkat(a, b) {
 
     return result;
 }
-
-
 module.exports = { CariNilaiPangkat };
