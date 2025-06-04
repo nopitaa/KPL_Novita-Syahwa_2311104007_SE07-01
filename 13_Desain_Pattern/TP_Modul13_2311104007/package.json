@@ -1,0 +1,12 @@
+{
+  "name": "tp_modul13_2311104007",
+  "version": "1.0.0",
+  "main": "Observer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
