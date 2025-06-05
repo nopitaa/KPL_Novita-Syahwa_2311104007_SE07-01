@@ -1,0 +1,91 @@
+    body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    }
+
+    .container {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    width: 320px;
+    transition: all 0.3s ease;
+    }
+
+    .tab {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    }
+
+    .tablink {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: #6b7280;
+    transition: 0.3s;
+    }
+
+    .tablink.active {
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 10px;
+    }
+
+    .form {
+    display: none;
+    flex-direction: column;
+    }
+
+    .active-form {
+    display: flex;
+    flex-direction: column;
+    }
+
+    input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: 0.2s;
+    }
+
+    input:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+
+    button {
+    padding: 12px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+    background-color: #2563eb;
+    }
+
+    .error {
+    color: red;
+    font-size: 0.85em;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    }

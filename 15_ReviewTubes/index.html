@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+    <meta charset="UTF-8" />
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+    <div class="container">
+        <div class="tab">
+        <button class="tablink active" onclick="switchTab('login')">Login</button>
+        <button class="tablink" onclick="switchTab('register')">Register</button>
+        </div>
+
+        <div id="login" class="form active-form">
+        <input type="text" id="loginUsername" placeholder="Username" />
+        <input type="password" id="loginPassword" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <p class="error" id="loginError"></p>
+        </div>
+
+        <div id="register" class="form">
+        <input type="text" id="regUsername" placeholder="Username" />
+        <input type="password" id="regPassword" placeholder="Password" />
+        <button onclick="register()">Register</button>
+        <p class="error" id="regError"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
